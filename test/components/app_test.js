@@ -4,11 +4,18 @@ import App from '../../src/components/app';
 describe('App' , () => {
   let component;
 
-  beforeEach(() => {
-    component = renderComponent(App);
+    beforeEach( () => {
+        component = renderComponent(App);
+        
+    });
+
+  it('shows a commentBox', () => {
+    expect(component.find('.comment-box')).to.exist;
   });
 
-  it('renders something', () => {
-    expect(component).to.exist;
+  it('shows a commentList', () => {
+    expect(component.find('.comment-list')).to.exist;
   });
+  
+
 });
